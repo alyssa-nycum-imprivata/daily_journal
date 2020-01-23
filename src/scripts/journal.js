@@ -1,1 +1,1 @@
-API.getEntries().then(renderJournalEntries);
+API.getEntries().then(render.renderJournalEntries);
