@@ -1,5 +1,5 @@
 import apiManager from './data.js'
-import render from './entryComponent.js'
+import render from './entriesDOM'
 import entryManager from './entryManager.js';
 
 apiManager.getEntries().then(render.renderJournalEntries);
