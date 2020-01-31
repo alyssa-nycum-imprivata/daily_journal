@@ -3,9 +3,9 @@ import render from "./entriesDOM.js";
 
 const entryManager = {
     addSubmitClickEventListener() {
-        const submitButton = document.querySelector(".button");
+        const recordEntryButton = document.querySelector(".button");
 
-        submitButton.addEventListener("click", () => {
+        recordEntryButton.addEventListener("click", () => {
             const completeEntry = [];
 
             const allInputfields = document.querySelectorAll(".field")
