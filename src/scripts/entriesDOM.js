@@ -1,3 +1,5 @@
+import build from './entryComponent.js'
+
 const render = {
     renderJournalEntries(entries) {
         const container = document.querySelector(".entryLog");
@@ -7,3 +9,5 @@ const render = {
         });
     }
 };
+
+export default render;
