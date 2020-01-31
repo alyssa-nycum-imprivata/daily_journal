@@ -14,12 +14,5 @@ const entryFactoryFunction = (date, concepts, entry, mood) => {
 
 const newJournalEntry = entryFactoryFunction(userDateInput, userConceptsInput, userEntryInput, userMoodInput);
 
-fetch("http://localhost:8088/journalEntries", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify(newJournalEntry)
-});
 
-export default entryFactoryFunction;
+
