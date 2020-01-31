@@ -1,4 +1,8 @@
-import API from './data.js'
+import apiManager from './data.js'
 import render from './entryComponent.js'
+import entryManager from './entryManager.js';
 
-API.getEntries().then(render.renderJournalEntries);
+apiManager.getEntries().then(render.renderJournalEntries);
+
+entryManager.addSubmitClickEventListener();
+

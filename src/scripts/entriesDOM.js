@@ -1,4 +1,4 @@
-import build from './entryComponent.js'
+import build from './entryComponent.js';
 
 const render = {
     renderJournalEntries(entries) {

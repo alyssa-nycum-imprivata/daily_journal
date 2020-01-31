@@ -1,4 +1,4 @@
-const API = {
+const apiManager = {
     getEntries() {
         const entryUrl = "http://localhost:8088/journalEntries"
         return fetch(entryUrl)
@@ -6,4 +6,4 @@ const API = {
     }
 };
 
-export default API;
+export default apiManager;
