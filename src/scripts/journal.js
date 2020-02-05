@@ -1,13 +1,18 @@
 import apiManager from './data.js';
 import render from './entriesDOM.js';
-import addRecordEntryEventListener from './recordEventManager.js';
-import addFilterMoodEventListener from './moodEventListener.js'
+import recordEntryEventListener from './recordEventListener.js';
+import filterMoodEventListener from './moodEventListener.js'
+import deleteEntryEventListener from './deleteEventListener.js'
 
-addRecordEntryEventListener();
+recordEntryEventListener();
 
 apiManager.getEntries().then(render.renderJournalEntries);
 
-addFilterMoodEventListener();
+filterMoodEventListener();
+
+deleteEntryEventListener();
+
+
 
 
 

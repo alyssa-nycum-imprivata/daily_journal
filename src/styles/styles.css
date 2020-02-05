@@ -138,9 +138,12 @@ body {
     width: 100%;
  }
 
-
-
-
+.deleteButton {
+   background-color: rgb(203, 235, 235);
+   font-weight: bold;
+   border: 2px solid rgb(92, 92, 141);
+   margin-bottom: 10px;
+}
 
 
 

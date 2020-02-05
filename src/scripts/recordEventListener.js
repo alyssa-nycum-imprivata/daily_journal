@@ -1,7 +1,7 @@
 import apiManager from './data.js';
 import render from './entriesDOM.js';
 
-const addRecordEntryEventListener = () => {
+const recordEntryEventListener = () => {
     const recordEntryButton = document.getElementById("record_entry_button");
 
     recordEntryButton.addEventListener("click", () => {
@@ -29,4 +29,4 @@ const addRecordEntryEventListener = () => {
     })
 }
 
-export default addRecordEntryEventListener;
+export default recordEntryEventListener;

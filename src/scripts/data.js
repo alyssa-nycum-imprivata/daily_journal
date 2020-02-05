@@ -13,6 +13,11 @@ const apiManager = {
             },
             body: JSON.stringify(entry)
         });
+    },
+    deleteJournalEntry(entryId) {
+        return fetch(entryUrl + "/" + `${entryId}`, {
+            method: "DELETE"
+        })
     }
 };
 
