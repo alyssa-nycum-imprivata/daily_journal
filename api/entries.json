@@ -20,20 +20,6 @@
       "concepts": "Functions and Advanced Objects",
       "entry": "Today we covered the functions and objects representings things chapters in book 2. I felt comfortable with all of the concepts and examples in the class lesson because it was the same info as in the pre-work. I completed all the practice exercises in both chapters. I practiced writing functions with for loops and writing methods inside of objects. I found that I sometimes have difficulty reading written directions and understanding what exactly they want me to do in some of the practice exercises.",
       "mood": "Okay"
-    },
-    {
-      "date": "2020-02-04",
-      "concepts": "POST and DELETE",
-      "entry": "Today we learned how to work with JSON",
-      "mood": "happy",
-      "id": 4
-    },
-    {
-      "date": "2020-02-05",
-      "concepts": "Edit",
-      "entry": "Today we are learning PUT and PATCH.",
-      "mood": "okay",
-      "id": 5
     }
   ]
 }

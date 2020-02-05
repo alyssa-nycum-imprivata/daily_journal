@@ -1,8 +1,8 @@
 body {
     background-color: peachpuff;
     margin: 0;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
  }
   header {
     font-family: "Arial", sans-serif;
@@ -33,7 +33,7 @@ body {
     flex-basis: 50%;
     margin-right: 10px;
  }
-  fieldset {
+  .input_form {
     display: flex;
     flex-direction: column;
     font-family: "Arial", sans-serif;
@@ -101,9 +101,48 @@ body {
     font-style: italic;
  }
 
- .entriesHeader {
+ .results {
     border-top: 2px solid black;
     padding-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
  }
+
+ #filter {
+   font-family: "Arial", sans-serif;
+   border: 2px solid black;
+   background-color: peachpuff;
+   padding: 10px;
+   box-shadow: 2px 2px 3px 1px gray;
+   margin-left: 40px;
+   margin-top: 15px;
+   margin-bottom: 30px;
+   margin-right: 40px;
+ }
+
+ legend {
+    font-weight: bold;
+ }
+
+ #filter input {
+    float: left;
+    margin-right: 5px;
+ }
+
+ #filter label {
+    float: left;
+    margin-right: 20px;
+ }
+
+ #filter_mood {
+    width: 100%;
+ }
+
+
+
+
+
+
+
 
  
