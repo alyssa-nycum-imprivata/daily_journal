@@ -22,7 +22,18 @@
       "mood": "Okay"
     },
     {
+      "date": "2020-02-04",
+      "concepts": "POST and DELETE",
+      "entry": "Today we learned how to work with JSON",
+      "mood": "happy",
       "id": 4
+    },
+    {
+      "date": "2020-02-05",
+      "concepts": "Edit",
+      "entry": "Today we are learning PUT and PATCH.",
+      "mood": "okay",
+      "id": 5
     }
   ]
 }

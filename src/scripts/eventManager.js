@@ -10,17 +10,22 @@ const addRecordEntryEventListener = () => {
         const entryInput = document.getElementById("Entry");
         const moodInput = document.getElementById("Mood");
 
-        const entry = {
-            date: dateInput.value,
-            concepts: conceptsInput.value,
-            entry: entryInput.value,
-            mood: moodInput.value
-        };
+        if (dateInput.value.length === 0 ||conceptsInput.value.length === 0 || entryInput.value.length === 0 || moodInput.value.length === 0) {
+            alert("Please fill out all fields before recording entry");
+        } else {
+            const entry = {
+                date: dateInput.value,
+                concepts: conceptsInput.value,
+                entry: entryInput.value,
+                mood: moodInput.value
+            };
+    
+            apiManager.addJournalEntry(entry)
+                .then(() => {
+                    apiManager.getEntries().then(render.renderJournalEntries)
+                })
+        }
 
-        apiManager.addJournalEntry(entry)
-            .then(() => {
-                apiManager.getEntries().then(render.renderJournalEntries)
-            })
     })
 }
 

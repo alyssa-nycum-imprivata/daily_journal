@@ -28,14 +28,15 @@
           <fieldset>
               <label for="Mood">Mood:</label>
               <select id ="Mood" class="field" name="Mood">
-                  <option value="happy">Happy</option>
-                  <option value="relieved">Relieved</option>
-                  <option value="good">Good</option>
-                  <option value="okay">Okay</option>
-                  <option value="sad">Sad</option>
-                  <option value="frustrated">Frustrated</option>
-                  <option value="stressed">Stressed</option>
-                  <option value="confused">Confused</option>
+                  <option value="" disabled selected >Select</option>
+                  <option value="Happy">Happy</option>
+                  <option value="Relieved">Relieved</option>
+                  <option value="Good">Good</option>
+                  <option value="Okay">Okay</option>
+                  <option value="Sad">Sad</option>
+                  <option value="Frustrated">Frustrated</option>
+                  <option value="Stressed">Stressed</option>
+                  <option value="Confused">Confused</option>
               </select>
           </fieldset>
         
@@ -44,7 +45,7 @@
       </section>
 
       <section>
-          <input class="button" type="submit" value="Record Entry">
+          <input id="record_entry_button" class="button" type="submit" value="Record Entry">
       </section>
       <h1 class="entriesHeader">Journal Entries:</h1>
       <section class="entryLog"></section>
