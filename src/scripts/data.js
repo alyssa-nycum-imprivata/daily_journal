@@ -5,7 +5,7 @@ const apiManager = {
         return fetch(entryUrl)
             .then(resp => resp.json())
     },
-    addJournalEntry(entry) {
+    recordJournalEntry(entry) {
         return fetch(entryUrl, {
             method: "POST",
             headers: {
