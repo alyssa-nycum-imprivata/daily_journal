@@ -20,7 +20,7 @@ const addRecordEntryEventListener = () => {
                 mood: moodInput.value
             };
     
-            apiManager.addJournalEntry(entry)
+            apiManager.recordJournalEntry(entry)
                 .then(() => {
                     apiManager.getEntries().then(render.renderJournalEntries)
                 })
