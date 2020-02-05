@@ -14,6 +14,8 @@ const render = {
         entryInput.value = "",
         moodInput.value = "",
 
+        container.innerHTML = "";
+
 
         entries.forEach(entry => {
             const entryHtml = build.journalEntryFactory(entry);
