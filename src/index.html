@@ -1,79 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Daily Journal</title>
-  <link rel="stylesheet" href="styles/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Daily Journal</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
+
 <body>
-  <header>
-      <h1>Daily Journal</h1>
-  </header>
-  <section class="main">
-      <form action="/index.html" method="POST">
-          <fieldset>
-              <label for="Date">Today's Date:</label>
-              <input id="Date" class="field" type="date" name="Date">
-          </fieldset>
-          <fieldset>
-              <label for="Concepts">Concepts Covered:</label>
-              <textarea id="Concepts" class="field" type="text" name="Concepts Covered" rows="3" cols="50"></textarea>
-          </fieldset>
-          <fieldset>
-              <label for="Entry">Journal Entry:</label>
-              <textarea id="Entry" class="field" name="Journal Entry" rows="10" cols="50"></textarea>
-          </fieldset>
-          <fieldset>
-              <label for="Mood">Mood:</label>
-              <select id ="Mood" class="field" name="Mood">
-                  <option value="" disabled selected >Select</option>
-                  <option value="Happy">Happy</option>
-                  <option value="Relieved">Relieved</option>
-                  <option value="Good">Good</option>
-                  <option value="Okay">Okay</option>
-                  <option value="Sad">Sad</option>
-                  <option value="Frustrated">Frustrated</option>
-                  <option value="Stressed">Stressed</option>
-                  <option value="Confused">Confused</option>
-              </select>
-          </fieldset>
-        
-      </form>
-          <img src="img/_1060604.jpeg"/>
-      </section>
+    <header>
+        <h1>Daily Journal</h1>
+    </header>
+    <section class="main">
+        <form action="/index.html" method="POST">
+            <fieldset class="input_form">
+                <label for="Date">Today's Date:</label>
+                <input id="Date" class="field" type="date" name="Date">
+            </fieldset>
+            <fieldset class="input_form">
+                <label for="Concepts">Concepts Covered:</label>
+                <textarea id="Concepts" class="field" type="text" name="Concepts Covered" rows="3" cols="50"></textarea>
+            </fieldset>
+            <fieldset class="input_form">
+                <label for="Entry">Journal Entry:</label>
+                <textarea id="Entry" class="field" name="Journal Entry" rows="10" cols="50"></textarea>
+            </fieldset>
+            <fieldset class="input_form">
+                <label for="Mood">Mood:</label>
+                <select id="Mood" class="field" name="Mood">
+                    <option value="" disabled selected>Select</option>
+                    <option value="Happy">Happy</option>
+                    <option value="Relieved">Relieved</option>
+                    <option value="Good">Good</option>
+                    <option value="Okay">Okay</option>
+                    <option value="Sad">Sad</option>
+                    <option value="Frustrated">Frustrated</option>
+                    <option value="Stressed">Stressed</option>
+                    <option value="Confused">Confused</option>
+                </select>
+            </fieldset>
 
-      <section>
-          <input id="record_entry_button" class="button" type="submit" value="Record Entry">
-      </section>
+        </form>
+        <img src="img/_1060604.jpeg" />
+    </section>
 
-      <section>
-          <fieldset>
-              <legend>Filter Journal Entries by Mood</legend>
-              <input type="radio" name="mood" value="Happy" id="happy">
-              <label for="happy">Happy</label>
-              <input type="radio" name="mood" value="Relieved" id="relieved">
-              <label for="relieved">Relieved</label>
-              <input type="radio" name="mood" value="Good" id="good">
-              <label for="good">Good</label>
-              <input type="radio" name="mood" value="Okay" id="okay">
-              <label for="okay">Okay</label>
-              <input type="radio" name="mood" value="Sad" id="sad">
-              <label for="sad">Sad</label>
-              <input type="radio" name="mood" value="Frustrated" id="Frustrated">
-              <label for="Frustrated">Frustrated</label>
-              <input type="radio" name="mood" value="Stressed" id="stressed">
-              <label for="stressed">Stressed</label>
-              <input type="radio" name="mood" value="Confused" id="confused">
-              <label for="confused">Confused</label>
-          </fieldset>
-      </section>
+    <section>
+        <input id="record_entry_button" class="button" type="submit" value="Record Entry">
+    </section>
 
-      <h1 class="entriesHeader">Journal Entries:</h1>
-      <section class="entryLog"></section>
-     
-      
-      <script type="module" src="scripts/journal.js"></script>
+    <article class="results">
+
+        <section id="filter_mood">
+            <fieldset id="filter">
+                <legend>Filter Journal Entries by Mood</legend>
+                <div>
+                    <input type="radio" name="mood" value="Happy" id="happy" class="mood_filter">
+                    <label for="happy">Happy</label>
+                </div>
+                <div>
+                    <input type="radio" name="mood" value="Relieved" id="relieved" class="mood_filter">
+                    <label for="relieved">Relieved</label>
+                </div>
+                <div>
+                    <input type="radio" name="mood" value="Good" id="good" class="mood_filter">
+                    <label for="good">Good</label>
+                </div>
+                <div>
+                    <input type="radio" name="mood" value="Okay" id="okay" class="mood_filter">
+                    <label for="okay">Okay</label>
+                </div>
+                <div>
+                    <input type="radio" name="mood" value="Sad" id="sad" class="mood_filter">
+                    <label for="sad">Sad</label>
+                </div>
+                <div>
+                    <input type="radio" name="mood" value="Frustrated" id="Frustrated" class="mood_filter">
+                    <label for="Frustrated">Frustrated</label>
+                </div>
+                <div>
+                    <input type="radio" name="mood" value="Stressed" id="stressed" class="mood_filter">
+                    <label for="stressed">Stressed</label>
+                </div>
+                <div>
+                    <input type="radio" name="mood" value="Confused" id="confused" class="mood_filter">
+                    <label for="confused">Confused</label>
+                </div>
+
+            </fieldset>
+        </section>
+
+        <h1 class="entriesHeader">Journal Entries:</h1>
+        <section class="entryLog"></section>
+    </article>
+
+
+
+    <script type="module" src="scripts/journal.js"></script>
 </body>
+
 </html>
