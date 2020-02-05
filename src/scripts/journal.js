@@ -1,4 +1,9 @@
-import API from './data.js'
-import render from './entriesDOM.js'
+import apiManager from './data.js';
+import render from './entriesDOM.js';
+import addRecordEntryEventListener from './eventManager.js';
 
-API.getEntries().then(render.renderJournalEntries);
+addRecordEntryEventListener();
+
+apiManager.getEntries().then(render.renderJournalEntries);
+
+
