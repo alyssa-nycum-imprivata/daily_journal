@@ -1,7 +1,7 @@
 import apiManager from "./data.js";
 import render from "./entriesDOM.js";
 
-const addFilterMoodEventListener = () => {
+const filterMoodEventListener = () => {
     const radioButtons = document.getElementsByName("mood");
 
     radioButtons.forEach(button => {
@@ -26,5 +26,5 @@ const addFilterMoodEventListener = () => {
     })
 }
 
-export default addFilterMoodEventListener;
+export default filterMoodEventListener;
 
