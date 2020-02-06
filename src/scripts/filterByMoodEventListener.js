@@ -1,19 +1,19 @@
-import apiManager from "./data.js";
-import render from "./entriesDOM.js";
+import apiManager from "./apiManager.js";
+import render from "./renderJournalEntries.js";
 
-const filterMoodEventListener = () => {
+const filterByMoodEventListener = () => {
     const radioButtons = document.getElementsByName("mood");
 
     radioButtons.forEach(button => {
         button.addEventListener("click", event => {
 
-            const container = document.querySelector(".entryLog");
+            const entryLogContainer = document.querySelector(".entryLog");
 
-            container.innerHTML = "";
+            entryLogContainer.innerHTML = "";
 
             const selectedMood = event.target.value
 
-            apiManager.getEntries()
+            apiManager.getAllEntries()
                 .then(entries => {
                     const filteredEntires = entries.filter(entry => {
                         if (entry.mood === selectedMood) {
@@ -26,5 +26,5 @@ const filterMoodEventListener = () => {
     })
 }
 
-export default filterMoodEventListener;
+export default filterByMoodEventListener;
 

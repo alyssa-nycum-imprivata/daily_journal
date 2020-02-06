@@ -138,14 +138,22 @@ body {
     width: 100%;
  }
 
-.deleteButton {
+.deleteButton,.editButton {
    background-color: rgb(203, 235, 235);
    font-weight: bold;
    border: 2px solid rgb(92, 92, 141);
    margin-bottom: 10px;
 }
 
+.editButton {
+   margin-right: 10px;
+}
 
+.renderedEntry {
+   border-top: 2px solid black;
+   margin-top: 10px;
+}
 
-
- 
+.entriesHeader {
+   margin-bottom: 15px;
+}
