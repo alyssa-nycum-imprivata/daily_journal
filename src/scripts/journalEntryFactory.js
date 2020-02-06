@@ -1,7 +1,7 @@
 const build = {
     journalEntryFactory(entry) {
         return `
-            <section class="entry--${entry.id}">
+            <section class="renderedEntry entry--${entry.id}">
                 <h3 class="concepts">${entry.concepts}</h3>
                 <p class="date">${entry.date}</p>
                 <p class="entry">${entry.entry}</p>

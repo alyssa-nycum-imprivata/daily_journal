@@ -149,6 +149,11 @@ body {
    margin-right: 10px;
 }
 
+.renderedEntry {
+   border-top: 2px solid black;
+   margin-top: 10px;
+}
 
-
- 
+.entriesHeader {
+   margin-bottom: 15px;
+}
