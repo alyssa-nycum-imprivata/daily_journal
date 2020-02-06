@@ -2,7 +2,7 @@ import build from './entryComponent.js'
 
 const render = {
     renderJournalEntries(entries) {
-        const container = document.querySelector(".entryLog");
+        const entryLogContainer = document.querySelector(".entryLog");
 
         const dateInput = document.getElementById("Date");
         const conceptsInput = document.getElementById("Concepts");
@@ -14,12 +14,12 @@ const render = {
         entryInput.value = "",
         moodInput.value = "",
 
-        container.innerHTML = "";
+        entryLogContainer.innerHTML = "";
 
 
         entries.forEach(entry => {
             const entryHtml = build.journalEntryFactory(entry);
-            container.innerHTML += entryHtml;
+            entryLogContainer.innerHTML += entryHtml;
         });
     }
 };

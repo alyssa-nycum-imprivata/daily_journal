@@ -7,9 +7,9 @@ const filterMoodEventListener = () => {
     radioButtons.forEach(button => {
         button.addEventListener("click", event => {
 
-            const container = document.querySelector(".entryLog");
+            const entryLogContainer = document.querySelector(".entryLog");
 
-            container.innerHTML = "";
+            entryLogContainer.innerHTML = "";
 
             const selectedMood = event.target.value
 

@@ -14,6 +14,15 @@ const apiManager = {
             body: JSON.stringify(entry)
         });
     },
+    updateJournalEntry(entry) {
+        return fetch(entryUrl + "/" + `${entry.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(entry)
+        });
+    },
     deleteJournalEntry(entryId) {
         return fetch(entryUrl + "/" + `${entryId}`, {
             method: "DELETE"
