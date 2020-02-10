@@ -23,7 +23,18 @@ const filterByMoodEventListener = () => {
                     render.renderJournalEntries(filteredEntires)
                 })
         })
+    });
+    const allEntriesButton = document.querySelector("#all_entries_button");
+
+    const entryLogContainer = document.querySelector(".entryLog");
+
+    entryLogContainer.innerHTML = "";
+    
+    allEntriesButton.addEventListener("click", () => {
+        apiManager.getAllEntries()
+            .then(render.renderJournalEntries)
     })
+
 }
 
 export default filterByMoodEventListener;
