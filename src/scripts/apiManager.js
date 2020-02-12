@@ -1,5 +1,9 @@
 const entryUrl = "http://localhost:8088/journalEntries";
 
+const expandedUrl = "?_expand=mood";
+
+const moodUrl = "http://localhost:8088/moods"
+
 const dateInput = document.getElementById("Date");
 const conceptsInput = document.getElementById("Concepts");
 const entryInput = document.getElementById("Entry");
@@ -8,11 +12,11 @@ const entryIdInput = document.getElementById("entryId");
 
 const apiManager = {
     getAllEntries() {
-        return fetch(entryUrl)
+        return fetch(entryUrl + expandedUrl)
             .then(resp => resp.json())
     },
     updateEntryFields(entryId) {
-        fetch(entryUrl + "/" + `${entryId}`)
+        fetch(entryUrl + "/" + `${entryId}` + expandedUrl)
             .then(resp => resp.json())
             .then(entry => {
                 entryIdInput.value = entry.id
@@ -23,7 +27,7 @@ const apiManager = {
             })
     },
     recordJournalEntry(entry) {
-        return fetch(entryUrl, {
+        return fetch(entryUrl + expandedUrl, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -32,7 +36,7 @@ const apiManager = {
         });
     },
     updateJournalEntry(entry) {
-        return fetch(entryUrl + "/" + `${entry.id}`, {
+        return fetch(entryUrl + "/" + `${entry.id}` + expandedUrl, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -41,9 +45,16 @@ const apiManager = {
         });
     },
     deleteJournalEntry(entryId) {
-        return fetch(entryUrl + "/" + `${entryId}`, {
+        return fetch(entryUrl + "/" + `${entryId}` + expandedUrl, {
             method: "DELETE"
         })
+    },
+    createMoodHtml(id, mood) {
+        return fetch(moodUrl)
+            .then(resp => resp.json())
+            .then(mood => {
+                
+            })
     }
 };
 
