@@ -1,5 +1,7 @@
-const moodContainer = document.querySelector("#Mood");
+const createMoodHtml = (mood) => {
+        return `
+        <option value=${mood.id}>${mood.mood}</option>
+        `
+    }
 
-const createMoodHtml = (id, mood) => {
-    moodContainer.innerHTML += `<option value=${id}>${mood}</option>`
-}
+    export default createMoodHtml;

@@ -4,6 +4,11 @@ import recordNewOrUpdatedEntryEventListener from './recordNewOrUpdatedEntryEvent
 import filterByMoodEventListener from './filterByMoodEventListener.js';
 import deleteOrEditEntryEventListener from './deleteOrEditEntryEventListener.js';
 import searchEntriesEventListener from './searchEntriesEventListener.js';
+import renderMoods from './renderMoods.js'
+
+apiManager.getAllEntries().then(render.renderJournalEntries);
+
+apiManager.getMoods().then(renderMoods);
 
 filterByMoodEventListener();
 
@@ -13,7 +18,7 @@ recordNewOrUpdatedEntryEventListener();
 
 searchEntriesEventListener();
 
-apiManager.getAllEntries().then(render.renderJournalEntries);
+
 
 
 

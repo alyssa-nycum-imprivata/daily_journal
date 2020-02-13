@@ -16,10 +16,10 @@ const recordNewOrUpdatedEntryEventListener = () => {
             alert("Please fill out all fields before recording entry");
         } else {
             const entry = {
-                date: dateInput.value,
-                concepts: conceptsInput.value,
-                entry: entryInput.value,
-                mood: moodInput.value
+                "date": dateInput.value,
+                "concepts": conceptsInput.value,
+                "entry": entryInput.value,
+                "moodId": moodInput.value
             };
 
             if (entryIdInput.value !== "") {

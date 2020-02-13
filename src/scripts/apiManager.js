@@ -15,6 +15,10 @@ const apiManager = {
         return fetch(entryUrl + expandedUrl)
             .then(resp => resp.json())
     },
+    getMoods() {
+        return fetch(moodUrl)
+            .then(resp => resp.json())
+    },
     updateEntryFields(entryId) {
         fetch(entryUrl + "/" + `${entryId}` + expandedUrl)
             .then(resp => resp.json())
@@ -48,13 +52,6 @@ const apiManager = {
         return fetch(entryUrl + "/" + `${entryId}` + expandedUrl, {
             method: "DELETE"
         })
-    },
-    createMoodHtml(id, mood) {
-        return fetch(moodUrl)
-            .then(resp => resp.json())
-            .then(mood => {
-                
-            })
     }
 };
 
