@@ -16,7 +16,7 @@ const filterByMoodEventListener = () => {
             apiManager.getAllEntries()
                 .then(entries => {
                     const filteredEntires = entries.filter(entry => {
-                        if (entry.mood === selectedMood) {
+                        if (entry.mood.mood === selectedMood) {
                             return entry
                         }
                     })
